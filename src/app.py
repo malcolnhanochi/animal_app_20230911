@@ -23,7 +23,7 @@ def predict(img):
     # ネットワークの準備
     net = Net().cpu().eval()
     # # 学習済みモデルの重み（dog_cat.pt）を読み込み
-    net.load_state_dict(torch.load(r'animal_app_20230911\src\weights.pt', map_location=torch.device('cpu')))
+    net.load_state_dict(torch.load(r'src/weights.pt', map_location=torch.device('cpu')))
     #　データの前処理
     img = transform(img)
     img =img.unsqueeze(0) # 1次元増やす
